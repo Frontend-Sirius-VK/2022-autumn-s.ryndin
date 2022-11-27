@@ -1,0 +1,23 @@
+{
+  "name": "2022-autumn-s.ryndin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frontend-Sirius-VK/2022-autumn-s.ryndin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frontend-Sirius-VK/2022-autumn-s.ryndin/issues"
+  },
+  "homepage": "https://github.com/Frontend-Sirius-VK/2022-autumn-s.ryndin#readme",
+  "dependencies": {
+    "express": "4.18.2",
+    "morgan": "1.10.0"
+  }
+}
