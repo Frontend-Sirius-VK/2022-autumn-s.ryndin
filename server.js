@@ -2,6 +2,7 @@
 
 const express = require('express');
 const morgan = require('morgan');
+const path = require('path');
 
 const app = express();
 
@@ -11,7 +12,7 @@ app.use(express.static('.'));
 const port = process.env.PORT || 3030;
 
 app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, '.', 'index.html'));
+    res.sendFile(path.join(__dirname, 'src', 'index.html'));
 })
 
 app.get('/login', (req,res) => {
