@@ -1,0 +1,64 @@
+header {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    background-color: hsl(210,8%,97.5%);
+    border-top: 3px solid hsl(27,90%,55%);
+    align-items: center;
+    box-shadow: 0 1px 2px hsla(0,0%,0%,0.05), 0 1px 4px hsla(0,0%,0%,0.05), 0 2px 8px hsla(0,0%,0%,0.05);
+}
+
+header .header-logo {
+    width: 170px;
+    height: 100%;
+    padding: 0 8px;
+}
+
+header .header-logo img {
+    width: 170px;
+    margin-top: 8px;
+}
+
+header .header-mnu_top {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 236px;
+}
+
+header .header-mnu_top li {
+    display: inline-block;
+}
+
+header .header-mnu_top li a {
+    display: block;
+    text-decoration: none;
+    padding: 6px 12px;
+    color: hsl(210,8%,35%);
+}
+
+header .header-btns {
+    margin-left: auto;
+    margin-right: 20px;
+    min-width: 154px;
+}
+
+header .header-btns a {
+    text-decoration: none;
+    margin-right: 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 6px 12px;
+}
+
+header .header-btns .btn-login {
+    color: hsl(205,47%,42%);
+    background-color: hsl(205,46%,92%);
+    border-color: var(--buttons-border-color);
+}
+
+header .header-btns .btn-sign {
+    color: hsl(0,0%,100%);
+    background-color: hsl(206,100%,52%);
+    border-color: var(--buttons-border-color);
+}

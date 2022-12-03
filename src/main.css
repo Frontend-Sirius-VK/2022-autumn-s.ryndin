@@ -1,0 +1,10 @@
+@import "components/header/header.css";
+@import "components/questionBlock/questions.css";
+
+:root {
+    --buttons-border-color: hsl(205,41%,63%);
+}
+
+body {
+    margin: 0;
+}
