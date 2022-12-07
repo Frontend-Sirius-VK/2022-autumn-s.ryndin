@@ -8,6 +8,7 @@ export class QuestionsBlockRender {
 
     render(data) {
         this.container = document.createElement('div');
+        this.container.classList.add('post-container');
         data.forEach((post) => {
             const newPost = new QuestionBlock(this.container);
             newPost.render(post.stats, post.title, post.excerp)

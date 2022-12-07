@@ -14,12 +14,14 @@ export class HeaderBlock {
     }
 
     render() {
+        this.parent.innerHTML = '';
         const header = document.createElement('header');
 
         const logo = document.createElement('a');
         logo.classList.add('header-logo');
 
         const img = document.createElement('img');
+        img.classList.add('photo_logo');
         img.alt = this.alt;
         img.src = this.src;
 
@@ -31,7 +33,9 @@ export class HeaderBlock {
 
         this.menuElements.forEach((elem) => {
             const bulletElement = document.createElement('li');
+            bulletElement.classList.add('header-mnu_element');
             const bulletLink = document.createElement('a');
+            bulletLink.classList.add('header-mnu_link');
             bulletLink.textContent = elem;
             bulletElement.append(bulletLink);
             menu.append(bulletElement);

@@ -6,7 +6,6 @@ export class QuestionPageView {
     constructor() {
         this.header = null;
         this.questions = null;
-
         EventBus.on('questions:got-info', this.update.bind(this));
     }
 
@@ -22,6 +21,7 @@ export class QuestionPageView {
         if (!data || !Array.isArray(data) || data.length === 0) {
             return;
         }
+        this.render();
         this.questions.update(data);
     }
 }

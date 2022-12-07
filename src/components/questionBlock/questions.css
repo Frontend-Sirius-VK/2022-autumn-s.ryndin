@@ -7,7 +7,7 @@
     display: flex;
     padding: 16px;
     height: 100px;
-    border: 1px solid hsl(210,8%,90%);
+    border: 1px solid var(--question-summary_border-color);
     margin-top: 20px;
 }
 
@@ -35,7 +35,7 @@
 .post-title a {
     text-decoration: none;
     font-size: 20px;
-    color: hsl(206,100%,40%);
+    color: var(--post-links_color);
 }
 
 .post-excerp {

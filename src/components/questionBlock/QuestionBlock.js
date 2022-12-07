@@ -5,9 +5,6 @@ export class QuestionBlock {
     }
 
     render(postStats, postTitle, postExcerp) {
-        const container = document.createElement('div');
-        container.classList.add('container');
-
         const summary = document.createElement('div');
         summary.classList.add('question-summary');
 
@@ -34,7 +31,6 @@ export class QuestionBlock {
         title.append(titleLink);
         post.append(title, excerp);
         summary.append(stats, post);
-        container.append(summary);
-        this.parent.appendChild(container);
+        this.parent.appendChild(summary);
     }
 }

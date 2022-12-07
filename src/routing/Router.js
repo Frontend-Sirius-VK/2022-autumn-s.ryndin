@@ -17,8 +17,7 @@ export class Router {
             event.preventDefault();
 
             if (target.href !== undefined) {
-                // this.go(target.href);
-                this.stop();
+                this.go(target.href);
             }
         }
     }

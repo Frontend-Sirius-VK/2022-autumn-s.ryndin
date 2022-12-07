@@ -11,14 +11,10 @@ app.use(express.static('.'));
 
 const port = process.env.PORT || 3030;
 
-const db = require('./src/dataBase.js')
+const db = require('./src/database.js')
 
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, 'src', 'index.html'));
-})
-
-app.get('/login', (req,res) => {
-    // TODO
 })
 
 app.get('/question', async (req,res) => {

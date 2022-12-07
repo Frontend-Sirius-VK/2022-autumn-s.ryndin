@@ -8,13 +8,12 @@ export class Question {
     }
 
     fetchData() {
-        fetch('/question').then((response) => response.json())
-                                .then((data) => {
-                                    this.stats = data.stats;
-                                    this.title = data.title;
-                                    this.excerp = data.excerp;
+        fetch('/question').then((response) => response.json()).then((data) => {
+            this.stats = data.stats;
+            this.title = data.title;
+            this.excerp = data.excerp;
 
-                                    EventBus.emit('questions:got-info', data);
-                                })
+            EventBus.emit('questions:got-info', data);
+        })
     }
 }
