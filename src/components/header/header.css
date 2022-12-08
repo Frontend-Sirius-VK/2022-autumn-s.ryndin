@@ -1,11 +1,11 @@
-header {
+.header-container {
     width: 100%;
     display: flex;
     height: 50px;
-    background-color: var(--background_color);
-    border-top: 3px solid var(--border-top_color);
+    background-color: var(--background-color);
+    border-top: 3px solid var(--border-top-color);
     align-items: center;
-    box-shadow: var(--box-shadow_color);
+    box-shadow: var(--box-shadow-color);
 }
 
 .header-logo {
@@ -34,7 +34,7 @@ header {
     display: block;
     text-decoration: none;
     padding: 6px 12px;
-    color: var(--header-links_color);
+    color: var(--header-links-color);
 }
 
 .header-btns {
@@ -52,13 +52,13 @@ header {
 }
 
 .btn-login {
-    color: var(--btn-login_color);
+    color: var(--btn-login-color);
     background-color: var(--btn-login_background-color);
-    border-color: var(--buttons-border_color);
+    border-color: var(--buttons-border-color);
 }
 
 .btn-sign {
-    color: var(--btn-sign_color);
-    background-color: var(--btn-sign_background-color);
-    border-color: var(--buttons-border_color);
+    color: var(--btn-sign-color);
+    background-color: var(--btn-sign-background-color);
+    border-color: var(--buttons-border-color);
 }

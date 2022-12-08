@@ -16,6 +16,7 @@ export class HeaderBlock {
     render() {
         this.parent.innerHTML = '';
         const header = document.createElement('header');
+        header.classList.add('header-container');
 
         const logo = document.createElement('a');
         logo.classList.add('header-logo');
