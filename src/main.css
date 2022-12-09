@@ -1,0 +1,20 @@
+@import "components/header/header.css";
+@import "components/questionBlock/questions.css";
+
+:root {
+    --buttons-border-color: hsl(205,41%,63%);
+    --box-shadow-color: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 2px 8px hsla(0, 0%, 0%, 0.05);
+    --border-top-color: hsl(27, 90%, 55%);
+    --background-color: hsl(210, 8%, 97.5%);
+    --header-links-color: hsl(210, 8%, 35%);
+    --btn-login-color: hsl(205, 47%, 42%);
+    --btn-login_background-color: hsl(205, 46%, 92%);
+    --btn-sign-color: hsl(0, 0%, 100%);
+    --btn-sign-background-color: hsl(206, 100%, 52%);
+    --question-summary-border-color: hsl(210, 8%, 90%);
+    --post-links-color: hsl(206, 100%, 40%);
+    }
+
+body {
+    margin: 0;
+}
