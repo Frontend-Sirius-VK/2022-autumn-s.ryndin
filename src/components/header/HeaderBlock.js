@@ -22,7 +22,7 @@ export class HeaderBlock {
         logo.classList.add('header-logo');
 
         const img = document.createElement('img');
-        img.classList.add('photo_logo');
+        img.classList.add('photo-logo');
         img.alt = this.alt;
         img.src = this.src;
 

@@ -12,6 +12,7 @@ export class QuestionBlock {
         stats.classList.add('stats');
         for (const key in postStats) {
             const span = document.createElement('span');
+            span.classList.add('stats-elements');
             span.textContent = `${postStats[key]} ${key}`;
             stats.append(span);
         }
@@ -23,6 +24,7 @@ export class QuestionBlock {
         title.classList.add('post-title');
         const titleLink = document.createElement('a');
         titleLink.textContent = postTitle;
+        titleLink.classList.add('post-title-link');
 
         const excerp = document.createElement('div');
         excerp.classList.add('post-excerp');

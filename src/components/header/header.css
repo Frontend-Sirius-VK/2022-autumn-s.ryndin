@@ -14,7 +14,7 @@
     padding: 0 8px;
 }
 
-.header-logo img {
+.photo-logo {
     width: 170px;
     margin-top: 8px;
 }
@@ -43,21 +43,23 @@
     min-width: 154px;
 }
 
-.header-btns a {
+.btn-login {
     text-decoration: none;
     margin-right: 5px;
     border: 1px solid;
     border-radius: 3px;
     padding: 6px 12px;
-}
-
-.btn-login {
     color: var(--btn-login-color);
     background-color: var(--btn-login_background-color);
     border-color: var(--buttons-border-color);
 }
 
 .btn-sign {
+    text-decoration: none;
+    margin-right: 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 6px 12px;
     color: var(--btn-sign-color);
     background-color: var(--btn-sign-background-color);
     border-color: var(--buttons-border-color);
