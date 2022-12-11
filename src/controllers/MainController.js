@@ -1,10 +1,10 @@
-import {QuestionPageView} from "../views/QuestionPageView.js";
+import {MainPageView} from "../views/MainPageView.js";
 import {Question} from "../models/Question.js";
 
 export class MainController {
     process() {
         const questions = new Question();
-        const view = new QuestionPageView();
+        const view = new MainPageView();
         view.update(questions.fetchData());
     }
 }

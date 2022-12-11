@@ -8,7 +8,7 @@ export class Question {
     }
 
     fetchData() {
-        fetch('/question').then((response) => response.json()).then((data) => {
+        fetch('/getQuestionsData').then((response) => response.json()).then((data) => {
             this.stats = data.stats;
             this.title = data.title;
             this.excerp = data.excerp;

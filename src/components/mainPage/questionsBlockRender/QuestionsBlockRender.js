@@ -11,7 +11,7 @@ export class QuestionsBlockRender {
         this.container.classList.add('post-container');
         data.forEach((post) => {
             const newPost = new QuestionBlock(this.container);
-            newPost.render(post.stats, post.title, post.excerp)
+            newPost.render(post.id, post.stats, post.title, post.excerp)
         });
         this.parent.appendChild(this.container);
     }

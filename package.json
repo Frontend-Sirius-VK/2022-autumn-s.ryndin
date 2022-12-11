@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Frontend-Sirius-VK/2022-autumn-s.ryndin#readme",
   "dependencies": {
+    "body-parser": "1.20.1",
     "express": "4.18.2",
     "morgan": "1.10.0",
     "pg": "8.8.0"

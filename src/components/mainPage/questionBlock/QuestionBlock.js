@@ -4,7 +4,7 @@ export class QuestionBlock {
         this.parent = parent;
     }
 
-    render(postStats, postTitle, postExcerp) {
+    render(id, postStats, postTitle, postExcerp) {
         const summary = document.createElement('div');
         summary.classList.add('question-summary');
 
@@ -23,7 +23,9 @@ export class QuestionBlock {
         const title = document.createElement('div');
         title.classList.add('post-title');
         const titleLink = document.createElement('a');
+        titleLink.href = `/questions/${id}`;
         titleLink.textContent = postTitle;
+
         titleLink.classList.add('post-title-link');
 
         const excerp = document.createElement('div');

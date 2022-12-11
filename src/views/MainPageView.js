@@ -1,18 +1,18 @@
 import {HeaderBlock} from "../components/header/HeaderBlock.js";
-import {QuestionPageRender} from "../components/questionPage/questionPageRender/QuestionPageRender.js";
+import {QuestionsBlockRender} from "../components/mainPage/questionsBlockRender/QuestionsBlockRender.js";
 import EventBus from "../utils/EventBus.js";
 
-export class QuestionPageView {
+export class MainPageView {
     constructor() {
         this.header = null;
-        this.question = null;
-        EventBus.on('question:got-info', this.update.bind(this));
+        this.questions = null;
+        EventBus.on('questions:got-info', this.update.bind(this));
     }
 
     render() {
         const body = document.querySelector('body');
         this.header = new HeaderBlock(body);
-        this.question = new QuestionPageRender(body);
+        this.questions = new QuestionsBlockRender(body);
 
         this.header.render();
     }
@@ -22,6 +22,6 @@ export class QuestionPageView {
             return;
         }
         this.render();
-        this.question.update(data);
+        this.questions.update(data);
     }
 }
