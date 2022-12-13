@@ -3,8 +3,9 @@ import {Question} from "../models/Question.js";
 
 export class MainController {
     process() {
-        const questions = new Question();
         const view = new MainPageView();
-        view.update(questions.fetchData());
+        view.render();
+        const questions = new Question();
+        questions.fetchData();
     }
 }

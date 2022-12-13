@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.question-summary {
+.post-summary {
     width: 750px;
     display: flex;
     padding: 16px;
@@ -10,6 +10,8 @@
     border: 1px solid var(--question-summary-border-color);
     margin-top: 20px;
 }
+
+
 
 .stats {
     width: 20%;

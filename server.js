@@ -21,7 +21,6 @@ app.get('/', (req,res) => {
 
 app.get('/questions/:id', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'index.html'));
-    console.log(__dirname);
 });
 
 app.get('/getQuestionsData', async (req,res) => {

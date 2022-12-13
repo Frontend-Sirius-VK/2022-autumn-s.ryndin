@@ -18,7 +18,7 @@ async function getQuestions() {
 
 async function getQuestionData(id) {
     try {
-        const result = await pool.query('select title, excerp from question where id = $1', [id]);
+        const result = await pool.query('select title, excerp from question where id = $1;', [id]);
         return result.rows;
     } catch (err) {
         console.log(err);

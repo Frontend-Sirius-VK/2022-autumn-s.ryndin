@@ -6,7 +6,7 @@ export class QuestionBlock {
 
     render(id, postStats, postTitle, postExcerp) {
         const summary = document.createElement('div');
-        summary.classList.add('question-summary');
+        summary.classList.add('post-summary');
 
         const stats = document.createElement('div');
         stats.classList.add('stats');
