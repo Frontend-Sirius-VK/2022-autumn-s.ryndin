@@ -9,7 +9,7 @@ export class QuestionInfo {
         summary.classList.add('question-summary');
 
         const title = document.createElement('div');
-        title.classList.add('post-title');
+        title.classList.add('question-title');
 
         const titleHeader = document.createElement('h1');
         titleHeader.classList.add('header-post-title');

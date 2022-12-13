@@ -11,7 +11,7 @@ export class QuestionPageRender {
         this.container.classList.add('container');
 
         const post = new QuestionInfo(this.container);
-        post.render(data.title, data.excerp);
+        post.render(data[0].title, data[0].excerp);
 
         this.parent.appendChild(this.container);
     }

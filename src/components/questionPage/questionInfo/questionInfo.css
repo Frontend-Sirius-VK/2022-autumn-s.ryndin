@@ -1,0 +1,24 @@
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 2px solid var(--question-summary-border-color);
+}
+
+.question-summary {
+    padding: 24px;
+}
+
+.question-title {
+    border-bottom: 2px solid var(--question-summary-border-color);
+}
+
+.header-post-title {
+    margin-top: 0;
+    color: var(--header-links-color);
+}
+
+.post-body {
+    margin-top: 30px;
+    font-size: 20px;
+}
