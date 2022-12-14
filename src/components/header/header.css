@@ -8,6 +8,14 @@
     box-shadow: var(--box-shadow-color);
 }
 
+.hamb {
+    display: none;
+}
+
+.header-short-logo {
+    display: none;
+}
+
 .header-logo {
     width: 170px;
     height: 100%;
@@ -44,6 +52,7 @@
 }
 
 .btn-login {
+    cursor: pointer;
     text-decoration: none;
     margin-right: 5px;
     border: 1px solid;
@@ -55,6 +64,7 @@
 }
 
 .btn-sign {
+    cursor: pointer;
     text-decoration: none;
     margin-right: 5px;
     border: 1px solid;
