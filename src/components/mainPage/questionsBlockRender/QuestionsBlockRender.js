@@ -7,7 +7,6 @@ export class QuestionsBlockRender {
         this.parent = parent;
         this.container = null;
 
-        EventBus.on('questions:got-info', this.update.bind(this));
         EventBus.on('questions:loading', this.render.bind(this));
     }
 
