@@ -3,6 +3,8 @@
     margin-left: auto;
     margin-right: auto;
     border-left: 2px solid var(--question-summary-border-color);
+    border-right: 2px solid var(--question-summary-border-color);
+    border-bottom: 2px solid var(--question-summary-border-color);
 }
 
 .question-summary {

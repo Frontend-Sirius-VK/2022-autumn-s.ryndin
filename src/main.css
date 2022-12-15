@@ -3,6 +3,7 @@
 @import "styles/questionInfo.css";
 @import "styles/loader.css";
 @import "styles/error.css";
+@import "styles/media.css";
 
 :root {
     --buttons-border-color: hsl(205,41%,63%);
