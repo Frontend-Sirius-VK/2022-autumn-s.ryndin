@@ -1,0 +1,69 @@
+@media (max-width : 800px) {
+    .container {
+        width: 100%;
+        border-bottom: 0;
+    }
+
+    .post-summary {
+        width: 100%;
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .post {
+        padding-right: 30px;
+    }
+}
+
+@media (max-width : 600px) {
+    .header-mnu_top,
+    .header-logo {
+        display: none;
+    }
+
+    .btn-sign {
+        margin-right: 0;
+    }
+
+    .hamb {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamb-field {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: black;
+    }
+
+    .header-short-logo {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .short-photo-logo {
+        width: 50px;
+        height: 100%;
+    }
+
+    .post {
+        width: 80%;
+    }
+
+    .container {
+        width: 100%;
+        border-bottom: 0;
+    }
+
+    .question-summary {
+        padding: 15px;
+    }
+}
