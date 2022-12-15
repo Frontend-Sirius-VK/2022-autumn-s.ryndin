@@ -33,7 +33,7 @@ export class Router {
     getID() {
         const pathParser = window.location.pathname.split('/');
         let id;
-        if (pathParser[1] === 'questions') {
+        if (pathParser[1] !== undefined) {
             id = pathParser[2];
         }
         return id;
@@ -46,23 +46,27 @@ export class Router {
 
     invokeController() {
         const id = this.getID();
-        const pathname = window.location.pathname;
+        const {pathname} = window.location;
+        const controllerFlag = new MainController();
         const result = routes.find((route) => {
             const regexp = new RegExp(route.path);
             const matches = pathname.match(regexp);
 
-            if (!matches) {
-                return false;
-            }
-            return true;
+            return Boolean(matches);
         });
 
         if (!result) {
             console.log(404);
         }
+
         const ControllerClass = result.controller;
         const controller = new ControllerClass();
-        controller.process(id);
+
+        if (result.controller !== controllerFlag) {
+            controller.process(id);
+        } else {
+            controller.process();
+        }
     }
 
     start() {

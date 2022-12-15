@@ -7,6 +7,9 @@ export class QuestionPageView {
         this.header = null;
         this.question = null;
         EventBus.on('question:got-info', this.update.bind(this));
+        EventBus.on('question:not-found', this.renderError.bind(this));
+        EventBus.on('question:bad-request', this.renderError.bind(this));
+        EventBus.on('question:server-error', this.renderError.bind(this));
     }
 
     render() {
@@ -23,5 +26,35 @@ export class QuestionPageView {
         }
         this.render();
         this.question.update(data);
+    }
+
+    renderError(data) {
+        const body = document.querySelector('body');
+        if (body) {
+            body.innerHTML = '';
+        }
+        this.header = new HeaderBlock(body);
+        this.header.render();
+        const errorWrapper = document.createElement('div');
+        errorWrapper.classList.add('error-wrapper');
+
+        const titleBlock = document.createElement('div');
+        titleBlock.classList.add('title-block');
+
+        const errorTitle = document.createElement('p');
+        errorTitle.classList.add('error-title');
+        errorTitle.textContent = data.title;
+
+        const descriptionBlock = document.createElement('div');
+        descriptionBlock.classList.add('description-block');
+
+        const errorDescription = document.createElement('p');
+        errorDescription.classList.add('error-description');
+        errorDescription.textContent = data.description;
+
+        titleBlock.append(errorTitle);
+        descriptionBlock.append(errorDescription);
+        errorWrapper.append(titleBlock, descriptionBlock);
+        body.append(errorWrapper);
     }
 }

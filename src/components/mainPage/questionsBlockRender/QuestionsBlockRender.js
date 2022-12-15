@@ -15,7 +15,7 @@ export class QuestionsBlockRender {
         this.container.classList.add('post-container');
 
         if (!data) {
-            this.container = '';
+            this.parent.innerHTML = '';
             const loader = new Loader(this.container);
             loader.render();
             this.parent.prepend(this.container);
@@ -24,9 +24,9 @@ export class QuestionsBlockRender {
 
         data.forEach((post) => {
             const newPost = new QuestionBlock(this.container);
-            newPost.render(post.id, post.stats, post.title, post.excerp)
+            newPost.render(post.id, post.stats, post.title, post.excerp);
         });
-        this.parent.prepend(this.container);
+        this.parent.appendChild(this.container);
     }
 
     update(data) {

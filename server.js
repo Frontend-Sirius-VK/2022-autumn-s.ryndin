@@ -16,40 +16,86 @@ const port = process.env.PORT || 3030;
 const db = require('./src/database.js');
 
 app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, 'src', 'index.html'));
+    try {
+        res.sendFile(path.join(__dirname, 'src', 'index.html'));
+    } catch (err) {
+        res.status(500).end();
+    }
 });
 
 app.get('/questions/:id', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src', 'index.html'));
+    try {
+        res.sendFile(path.join(__dirname, 'src', 'index.html'));
+    } catch (err) {
+        res.status(500).end();
+    }
 });
 
 app.get('/getQuestionsData', async (req,res) => {
-    const result = await db.getQuestions();
-    res.json(result);
+    try {
+        const result = await db.getQuestions();
+
+        if (!result) {
+            res.status(500).end();
+        }
+
+        res.json(result);
+    } catch (err) {
+        res.status(500).end();
+    }
 });
 
 app.get('/getQuestionData/:id', async (req, res) => {
-    const id = req.params.id;
-    const result = await db.getQuestionData(id);
-    res.json(result);
+    try {
+        const id = req.params.id;
+        const result = await db.getQuestionData(id);
+
+        if (isNaN(id)) {
+            res.status(400).end();
+        }
+
+        if (result.length === 0) {
+            res.status(404).end();
+        }
+
+        if (!result) {
+            res.status(500).end();
+        }
+
+        res.json(result);
+    } catch (err) {
+        res.status(500).end();
+    }
 });
 
 app.post('/createQuestion', async (req, res) => {
-    const newQuestion = await db.createQuestion(req);
-    res.json(newQuestion);
-    return res;
+    try {
+        const newQuestion = await db.createQuestion(req);
+        res.json(newQuestion);
+        return res;
+    } catch (err) {
+        res.status(500).end();
+    }
 });
 
 app.put('/editQuestion', async (req, res) => {
-    const updQuestion = await db.editQuestion(req);
-    res.json(updQuestion);
-    return res;
+    try {
+        const updQuestion = await db.editQuestion(req);
+        res.json(updQuestion);
+        return res;
+    } catch (err) {
+        res.status(500).end();
+    }
 });
 
 app.delete('/deleteQuestion/:id', async (req, res) => {
-    const id = req.params.id;
-    const dltQuestion = await db.deleteQuestion(id);
-    res.json(dltQuestion);
+    try {
+        const id = req.params.id;
+        const dltQuestion = await db.deleteQuestion(id);
+        res.json(dltQuestion);
+    } catch (err) {
+        res.status(500).end();
+    }
 });
 
 app.listen(port, function() {
