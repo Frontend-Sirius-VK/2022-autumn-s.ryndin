@@ -92,7 +92,10 @@ app.delete('/deleteQuestion/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const dltQuestion = await db.deleteQuestion(id);
-        res.json(dltQuestion);
+
+        if (res.status(200)) {
+            res.send('Deleted');
+        }
     } catch (err) {
         res.status(500).end();
     }

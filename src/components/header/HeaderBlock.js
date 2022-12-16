@@ -20,6 +20,7 @@ export class HeaderBlock {
 
         const logo = document.createElement('a');
         logo.classList.add('header-logo');
+        logo.href = '/';
 
         const hamb = document.createElement('div');
         hamb.classList.add('hamb');

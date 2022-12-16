@@ -1,5 +1,6 @@
 import {MainController} from "../controllers/MainController.js";
 import {QuestionController} from "../controllers/QuestionController.js";
+import EventBus from "../utils/EventBus.js";
 
 const routes = [
     {
@@ -14,6 +15,15 @@ const routes = [
 
 export class Router {
     constructor() {
+        EventBus.off('questions:loading');
+        EventBus.off('questions:got-info');
+        EventBus.off('questions:not-found');
+        EventBus.off('questions:bad-request');
+        EventBus.off('questions:server-error');
+        EventBus.off('question:got-info');
+        EventBus.off('question:not-found');
+        EventBus.off('question:bad-request');
+        EventBus.off('question:server-error');
         this.onDocumentClick = this.onDocumentClick.bind(this);
     }
 
