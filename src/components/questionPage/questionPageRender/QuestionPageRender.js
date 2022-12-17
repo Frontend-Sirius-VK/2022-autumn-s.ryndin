@@ -8,7 +8,7 @@ export class QuestionPageRender {
 
     render(data) {
         this.container = document.createElement('div')
-        this.container.classList.add('container');
+        this.container.classList.add('question-container');
 
         const post = new QuestionInfo(this.container);
         post.render(data[0].title, data[0].excerp);

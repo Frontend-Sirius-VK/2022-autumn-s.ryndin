@@ -1,11 +1,11 @@
-.loaderWrapper {
+.loader-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 25%;
 }
 
-.loader {
+.loader-wrapper__item {
     width: 48px;
     height: 48px;
     border: 5px solid rgb(0, 0, 0);

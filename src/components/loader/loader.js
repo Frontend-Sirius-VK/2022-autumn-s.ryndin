@@ -6,9 +6,9 @@ export class Loader {
 
     render() {
         const loaderWrap = document.createElement('div');
-        loaderWrap.className = 'loaderWrapper';
+        loaderWrap.className = 'loader-wrapper';
         const loader = document.createElement('span');
-        loader.className = 'loader';
+        loader.className = 'loader-wrapper__item';
         loaderWrap.append(loader);
 
         this.parent.appendChild(loaderWrap);

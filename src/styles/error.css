@@ -4,20 +4,20 @@
     margin-bottom: auto;
 }
 
-.title-block {
+.error-wrapper__title {
     display: flex;
     justify-content: center;
 }
 
-.error-title {
+.error-wrapper__title-text {
     font-size: 40px;
 }
 
-.description-block {
+.error-wrapper__description {
     display: flex;
     justify-content: center;
 }
 
-.error-description {
+.error-wrapper__description-text {
     font-size: 25px;
 }

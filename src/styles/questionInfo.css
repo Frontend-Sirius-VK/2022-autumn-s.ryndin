@@ -1,4 +1,4 @@
-.container {
+.question-container {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -7,20 +7,20 @@
     border-bottom: 2px solid var(--question-summary-border-color);
 }
 
-.question-summary {
+.question-container__summary {
     padding: 24px;
 }
 
-.question-title {
+.question-container__title {
     border-bottom: 2px solid var(--question-summary-border-color);
 }
 
-.header-post-title {
+.question-container__title-header {
     margin-top: 0;
     color: var(--header-links-color);
 }
 
-.post-body {
+.question-container__body {
     margin-top: 30px;
     font-size: 20px;
 }

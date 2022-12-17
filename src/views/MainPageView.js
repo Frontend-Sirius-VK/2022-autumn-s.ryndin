@@ -39,17 +39,17 @@ export class MainPageView {
         errorWrapper.classList.add('error-wrapper');
 
         const titleBlock = document.createElement('div');
-        titleBlock.classList.add('title-block');
+        titleBlock.classList.add('error-wrapper__title');
 
         const errorTitle = document.createElement('p');
-        errorTitle.classList.add('error-title');
+        errorTitle.classList.add('error-wrapper__title-text');
         errorTitle.textContent = data.title;
 
         const descriptionBlock = document.createElement('div');
-        descriptionBlock.classList.add('description-block');
+        descriptionBlock.classList.add('error-wrapper__description');
 
         const errorDescription = document.createElement('p');
-        errorDescription.classList.add('error-description');
+        errorDescription.classList.add('error-wrapper__description-text');
         errorDescription.textContent = data.description;
 
         titleBlock.append(errorTitle);

@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.post-summary {
+.post-container__summary {
     width: 750px;
     display: flex;
     padding: 16px;
@@ -11,34 +11,34 @@
     margin-top: 20px;
 }
 
-.stats {
+.post-container__stats {
     width: 20%;
     margin-right: 16px;
 }
 
 
-.stats-elements {
+.post-container__stats-elements {
     display: block;
     text-align: right;
     margin-bottom: 4px;
 }
 
-.post {
+.post-container__post {
     width: 100%;
 }
 
-.post-title {
+.post-container__post-title {
     font-size: 17px;
     margin-bottom: 4px;
 }
 
-.post-title-link {
+.post-container__post-link {
     text-decoration: none;
     font-size: 20px;
     color: var(--post-links-color);
 }
 
-.post-excerp {
+.post-container__post-excerp {
     width: 100%;
     -webkit-line-clamp: 2;
     display: -webkit-box;

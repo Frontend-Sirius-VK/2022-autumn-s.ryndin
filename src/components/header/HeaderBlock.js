@@ -6,55 +6,55 @@ export class HeaderBlock {
         this.menuElements = ['About', 'Products', 'For Teams'];
         this.buttons = [{
             title: 'Log in',
-            className: 'btn-login'
+            className: 'header__btn-login'
         },  {
             title: "Sign up",
-            className: 'btn-sign'
+            className: 'header__btn-sign'
         }];
     }
 
     render() {
         this.parent.innerHTML = '';
         const header = document.createElement('header');
-        header.classList.add('header-container');
+        header.classList.add('header');
 
         const logo = document.createElement('a');
-        logo.classList.add('header-logo');
+        logo.classList.add('header__logo');
         logo.href = '/';
 
         const hamb = document.createElement('div');
-        hamb.classList.add('hamb');
+        hamb.classList.add('header__hamb');
         const hambField = document.createElement('div');
-        hambField.classList.add('hamb-field');
+        hambField.classList.add('header__hamb-field');
         for (let i = 0; i < 3; i++) {
             const bar = document.createElement('span');
-            bar.classList.add('bar');
+            bar.classList.add('header__hamb-field__bar');
             hambField.append(bar);
         }
 
         const img = document.createElement('img');
-        img.classList.add('photo-logo');
+        img.classList.add('header__img');
         img.alt = this.alt;
         img.src = this.src;
 
         const shortImgContainer = document.createElement('a');
-        shortImgContainer.classList.add('header-short-logo');
+        shortImgContainer.classList.add('header__short-logo');
         const shortImg = document.createElement('img');
-        shortImg.classList.add('short-photo-logo');
+        shortImg.classList.add('header__short-img');
         shortImg.alt = 'StackOverflow-short-logo';
         shortImg.src = '/src/img/short-logo.png';
 
         const menu = document.createElement('ul');
-        menu.classList.add('header-mnu_top');
+        menu.classList.add('header__mnu-top');
 
         const buttons = document.createElement('div');
-        buttons.classList.add('header-btns');
+        buttons.classList.add('header__btns');
 
         this.menuElements.forEach((elem) => {
             const bulletElement = document.createElement('li');
-            bulletElement.classList.add('header-mnu_element');
+            bulletElement.classList.add('header__mnu-top__element');
             const bulletLink = document.createElement('a');
-            bulletLink.classList.add('header-mnu_link');
+            bulletLink.classList.add('header__mnu-top__link');
             bulletLink.textContent = elem;
             bulletElement.append(bulletLink);
             menu.append(bulletElement);
