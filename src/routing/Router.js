@@ -30,13 +30,18 @@ export class Router {
     onDocumentClick(event) {
         const {target} = event;
         const {tagName} = target;
+        const state = {page: target.href};
 
         if (tagName === 'A') {
             event.preventDefault();
 
             if (target.href !== undefined) {
-                this.go(target.href);
+                this.go(state);
             }
+        }
+
+        if (event.type === 'popstate') {
+            this.updateState(state);
         }
     }
 
@@ -49,8 +54,15 @@ export class Router {
         return id;
     }
 
-    go(pathname) {
-        window.history.pushState({}, '', pathname);
+    updateState(state) {
+        if (!state) {
+            return;
+        }
+        this.invokeController();
+    }
+
+    go(state) {
+        window.history.pushState(state, '', state.page);
         this.invokeController();
     }
 
@@ -81,6 +93,7 @@ export class Router {
 
     start() {
         document.addEventListener('click', this.onDocumentClick);
+        window.addEventListener('popstate', this.onDocumentClick);
         this.invokeController();
     }
 

@@ -39,6 +39,7 @@ export class HeaderBlock {
 
         const shortImgContainer = document.createElement('a');
         shortImgContainer.classList.add('header__short-logo');
+        shortImgContainer.href = '/';
         const shortImg = document.createElement('img');
         shortImg.classList.add('header__short-img');
         shortImg.alt = 'StackOverflow-short-logo';
