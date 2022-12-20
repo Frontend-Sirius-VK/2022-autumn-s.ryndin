@@ -1,9 +1,13 @@
-import template from "./header.handlebars"
+import template from "./header.handlebars";
+import logo from "../../img/logo.png";
+import shortLogo from "../../img/short-logo.png";
 export class HeaderBlock {
     constructor(parent) {
         this.parent = parent;
+        this.shortAlt = 'short-StackOverflow-logo';
+        this.shortLogo = shortLogo;
         this.alt = 'StackOverflow-logo';
-        this.src = '/src/img/logo.png';
+        this.src = logo;
         this.menuElements = ['About', 'Products', 'For Teams'];
         this.buttons = [{
             title: 'Log in',
@@ -16,8 +20,8 @@ export class HeaderBlock {
 
     render() {
         this.parent.innerHTML = '';
-        const {alt, src, menuElements, buttons} = this;
-        const context = {alt, src, menuElements, buttons};
+        const {alt, src, shortAlt, shortLogo, menuElements, buttons} = this;
+        const context = {alt, src, shortAlt, shortLogo, menuElements, buttons};
         const html = template(context);
 
         this.parent.innerHTML += html;
