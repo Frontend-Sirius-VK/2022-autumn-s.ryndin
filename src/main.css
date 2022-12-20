@@ -1,5 +1,9 @@
-@import "components/header/header.css";
-@import "components/questionBlock/questions.css";
+@import "styles/header.css";
+@import "styles/questions.css";
+@import "styles/questionInfo.css";
+@import "styles/loader.css";
+@import "styles/error.css";
+@import "styles/media.css";
 
 :root {
     --buttons-border-color: hsl(205,41%,63%);

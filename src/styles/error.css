@@ -1,0 +1,23 @@
+.error-wrapper {
+    padding: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.error-wrapper__title {
+    display: flex;
+    justify-content: center;
+}
+
+.error-wrapper__title-text {
+    font-size: 40px;
+}
+
+.error-wrapper__description {
+    display: flex;
+    justify-content: center;
+}
+
+.error-wrapper__description-text {
+    font-size: 25px;
+}
