@@ -15,23 +15,7 @@ const port = process.env.PORT || 3030;
 
 const db = require('./src/database.js');
 
-app.get('/', (req,res) => {
-    try {
-        res.sendFile(path.join(__dirname, 'src', 'index.html'));
-    } catch (err) {
-        res.status(500).end();
-    }
-});
-
-app.get('/questions/:id', (req, res) => {
-    try {
-        res.sendFile(path.join(__dirname, 'src', 'index.html'));
-    } catch (err) {
-        res.status(500).end();
-    }
-});
-
-app.get('/getQuestionsData', async (req,res) => {
+app.get('/api/getQuestionsData', async (req,res) => {
     try {
         const result = await db.getQuestions();
 
@@ -45,7 +29,7 @@ app.get('/getQuestionsData', async (req,res) => {
     }
 });
 
-app.get('/getQuestionData/:id', async (req, res) => {
+app.get('/api/getQuestionData/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const result = await db.getQuestionData(id);
@@ -68,7 +52,7 @@ app.get('/getQuestionData/:id', async (req, res) => {
     }
 });
 
-app.post('/createQuestion', async (req, res) => {
+app.post('/api/createQuestion', async (req, res) => {
     try {
         const newQuestion = await db.createQuestion(req);
         res.json(newQuestion);
@@ -78,7 +62,7 @@ app.post('/createQuestion', async (req, res) => {
     }
 });
 
-app.put('/editQuestion', async (req, res) => {
+app.put('/api/editQuestion', async (req, res) => {
     try {
         const updQuestion = await db.editQuestion(req);
         res.json(updQuestion);
@@ -88,7 +72,7 @@ app.put('/editQuestion', async (req, res) => {
     }
 });
 
-app.delete('/deleteQuestion/:id', async (req, res) => {
+app.delete('/api/deleteQuestion/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const dltQuestion = await db.deleteQuestion(id);

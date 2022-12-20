@@ -6,6 +6,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'main.[hash:8].js',
+        publicPath: '/',
         clean: true,
     },
     module: {
@@ -22,5 +23,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
         })
-    ]
+    ],
+    devServer: {
+        proxy: {
+            '/api': 'http://127.0.0.1:3030',
+        },
+        historyApiFallback: true
+    }
 };

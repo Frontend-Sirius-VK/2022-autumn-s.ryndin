@@ -7,7 +7,7 @@ export class QuestionPage {
     }
 
     fetchData(id) {
-        fetch(`/getQuestionData/${id}`)
+        fetch(`/api/getQuestionData/${id}`)
             .then((response) => {
                 const {status} = response;
                 if (status === 404) {
