@@ -15,10 +15,11 @@ const port = process.env.PORT || 3030;
 
 const db = require('./src/database.js');
 
+
 app.get('/api/getQuestionsData', async (req,res) => {
     try {
         const result = await db.getQuestions();
-
+      
         if (!result) {
             res.status(500).end();
         }
