@@ -1,10 +1,10 @@
 const Pool = require('pg').Pool;
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'StackOverflow',
-    password: '123',
-    port: '999'
+    user: process.env.POSTGRES_USER,
+    host: process.env.HOST || 'localhost',
+    database: process.env.APP_NAME,
+    password: process.env.PASSWORD,
+    port: process.env.POSTGRES_PORT
 })
 
 async function getQuestions() {
