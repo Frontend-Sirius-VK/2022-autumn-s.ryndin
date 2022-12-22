@@ -36,6 +36,10 @@
     text-decoration: none;
     font-size: 20px;
     color: var(--post-links-color);
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .post-container__post-excerp {
