@@ -8,7 +8,7 @@ export class Question {
     }
 
     fetchData() {
-        fetch(`/getQuestionsData`)
+        fetch(`/api/getQuestionsData`)
             .then((response) => {
                 const {status} = response;
                 if (status === 404) {

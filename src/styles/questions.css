@@ -1,14 +1,15 @@
-.container {
+.post-container {
     width: 100%;
 }
 
 .post-container__summary {
+    margin-left: auto;
+    margin-right: auto;
     width: 750px;
     display: flex;
     padding: 16px;
     height: 100px;
     border: 1px solid var(--question-summary-border-color);
-    margin-top: 20px;
 }
 
 .post-container__stats {
@@ -36,6 +37,10 @@
     text-decoration: none;
     font-size: 20px;
     color: var(--post-links-color);
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .post-container__post-excerp {

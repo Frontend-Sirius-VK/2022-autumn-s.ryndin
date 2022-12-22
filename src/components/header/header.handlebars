@@ -1,0 +1,33 @@
+<header class="header">
+
+    <a class="header__logo">
+        <img src={{src}} alt={{alt}} class="header__img">
+    </a>
+
+    <div class="header__hamb">
+        <div class="header__hamb-field">
+            <span class="header__hamb-field__bar"></span>
+            <span class="header__hamb-field__bar"></span>
+            <span class="header__hamb-field__bar"></span>
+        </div>
+    </div>
+
+    <a class="header__short-logo">
+        <img src={{shortLogo}} alt={{shortAlt}} class="header__short-img">
+    </a>
+
+    <ul class="header__mnu-top">
+        {{#each menuElements}}
+            <li class="header__mnu-top__element">
+                <span class="header__mnu-top__link">{{this}}</span>
+            </li>
+        {{/each}}
+    </ul>
+
+    <div class="header__btns">
+        {{#each buttons}}
+            <span class={{className}}>{{title}}</span>
+        {{/each}}
+    </div>
+
+</header>
